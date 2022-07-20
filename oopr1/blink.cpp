@@ -1,5 +1,7 @@
 #include <wiringPi.h>
 
+#define TIMELEDON 1000
+#define TIMELEDOFF 500
 int main (void)
 {
   wiringPiSetup () ;
@@ -7,9 +9,9 @@ int main (void)
   for (;;)
   {
     digitalWrite (0, HIGH) ; 
-    delay (1500) ;
+    delay (TIMELEDON) ;
     digitalWrite (0,  LOW) ; 
-    delay (500) ;
+    delay (TIMELEDOFF);
   }
   return 0 ;
 }
