@@ -2,7 +2,7 @@
 
 RaspberryPiPin::RaspberryPiPin(int r,int p):richting(r),pinNr(p),status(0)
 {
-   wiringPiSetupGpio();
+   
    pinMode(pinNr,richting);
 
 }

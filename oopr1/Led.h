@@ -8,13 +8,13 @@ class RaspberryPiPin;
 class Led
 {
   public:
-    Led(RaspberryPiPin*);
+    Led(RaspberryPi*);
     ~Led();
     void zetAan();
     void zetUit();
 
   private:
-     RaspberryPiPin* pin;
+     RaspberryPi* platform;
      int status=0;
       
 
