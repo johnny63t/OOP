@@ -1,16 +1,19 @@
 #include <wiringPi.h>
+#include "RaspberryPiPin.h"
+#include "Led.h"
 
 #define TIMELEDON 1000
 #define TIMELEDOFF 500
 int main (void)
 {
-  wiringPiSetup () ;
-  pinMode (0, OUTPUT) ;
+  RaspberryPiPin pld(OUTPUT,17);
+  Led ld(&pld);
+ 
   for (;;)
   {
-    digitalWrite (0, HIGH) ; 
+    ld.zetAan();
     delay (TIMELEDON) ;
-    digitalWrite (0,  LOW) ; 
+   ld.zetUit();
     delay (TIMELEDOFF);
   }
   return 0 ;

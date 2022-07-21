@@ -7,7 +7,7 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
+                "${workspaceFolder}/oopr1/*.cpp", 
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
                 "-l",
