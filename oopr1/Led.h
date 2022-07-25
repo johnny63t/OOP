@@ -4,7 +4,7 @@
 #pragma once
 
 #define OUTPUT 1
-class RaspberryPiPin;
+class RaspberryPi;
 class Led
 {
   public:
@@ -12,10 +12,12 @@ class Led
     ~Led();
     void zetAan();
     void zetUit();
+    bool sluitAan(int);
 
   private:
      RaspberryPi* platform;
      int status=0;
+     int aansluitNr=-1;
       
 
 };

@@ -12,8 +12,16 @@ Led::~Led()
 }
 
 void Led::zetAan() {
-    platform->pinWaarde(1);
+    platform->pinWaarde(aansluitNr,1);
 }
 void Led::zetUit() {
-    platform->pinWaarde(0);
+    platform->pinWaarde(aansluitNr,0);
 }
+bool Led::sluitAan(int nr ) {
+        if(platform && platform->koppelAansluiting(nr))  {
+            aansluitNr=nr;
+             return true;
+             
+        }
+        return false;
+ }

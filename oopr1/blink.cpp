@@ -1,5 +1,6 @@
 
-#include "RaspberryPiPin.h"
+//#include "RaspberryPiPin.h"
+//#include "RaspberryPi.h"
 #include "RaspberryPi.h"
 #include "Led.h"
 
@@ -8,8 +9,9 @@
 
 int main (void)
 {
-  RaspberryPi pi();
+  RaspberryPi pi;
   Led ld(&pi);
+  ld.sluitAan(17);
  
   for (;;)
   {
