@@ -10,6 +10,7 @@ public:
     RaspberryPiPin();
     RaspberryPiPin(int r, int p);
     ~RaspberryPiPin();
+    void zetInMode(int);
     void waardePin(int);
     int leesPinWaarde() const;
     int gpioPin()const;

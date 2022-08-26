@@ -14,6 +14,7 @@ class Led
     void zetAan();
     void zetUit();
     bool sluitAan(int);
+    int isLedAan()const;
 
   private:
      RaspberryPi* platform;

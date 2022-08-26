@@ -12,7 +12,7 @@ int main (void)
   RaspberryPi pi;
   Led ld(&pi);
   ld.sluitAan(17);
- 
+   
   for (;;)
   {
     ld.zetAan();
